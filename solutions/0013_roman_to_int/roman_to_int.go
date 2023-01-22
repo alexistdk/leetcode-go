@@ -40,18 +40,11 @@ func romanToInt(s string) int {
 		}
 	} else {
 		for i := 0; i <= amountOfLetters; i++ {
-			if i == 0 {
+			if listOfNumbers[i] >= listOfNumbers[i+1] {
 				finalNumber += listOfNumbers[i]
-			}
-
-			if i > 0 && i%2 == 0 {
-				if listOfNumbers[i] > listOfNumbers[i-1] {
-					finalNumber += (listOfNumbers[i] - listOfNumbers[i-1])
-				} else if listOfNumbers[i] == listOfNumbers[i-1] {
-					finalNumber += listOfNumbers[i] * 2
-				} else {
-					finalNumber += listOfNumbers[i] + listOfNumbers[i-1]
-				}
+			} else if listOfNumbers[i] < listOfNumbers[i+1] {
+				finalNumber += (listOfNumbers[i+1] - listOfNumbers[i])
+				i += 1
 			}
 		}
 	}
@@ -65,4 +58,5 @@ func main() {
 	fmt.Println(romanToInt("LVIII"))    // 58
 	fmt.Println(romanToInt("IV"))       // 4
 	fmt.Println(romanToInt("MCDLXXVI")) // 1476
+	fmt.Println(romanToInt("MMCDXXV"))  // 2425
 }
