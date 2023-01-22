@@ -17,6 +17,13 @@
             "request": "launch",
             "mode": "debug",
             "program": "solutions/0009_palindrome_number/palindrome_number.go"
+        },
+        {
+            "name": "Launch excersice 14",
+            "type": "go",
+            "request": "launch",
+            "mode": "debug",
+            "program": "solutions/0014_longest_common_prefix/longest_common_prefix.go"
         }
     ]
 }
