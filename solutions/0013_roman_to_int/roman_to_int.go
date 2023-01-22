@@ -39,7 +39,7 @@ func romanToInt(s string) int {
 			finalNumber += (listOfNumbers[1] - listOfNumbers[0])
 		}
 	} else {
-		for i := 0; i < amountOfLetters; i++ {
+		for i := 0; i <= amountOfLetters; i++ {
 			if i == 0 {
 				finalNumber += listOfNumbers[i]
 			}
@@ -60,9 +60,9 @@ func romanToInt(s string) int {
 }
 
 func main() {
-	fmt.Println(romanToInt("MCMXCIV"))    // 1994
-	fmt.Println(romanToInt("III"))        // 3
-	fmt.Println(romanToInt("LVIII"))      // 58
-	fmt.Println(romanToInt("IV"))         // 4
-	fmt.Println(romanToInt("IMCDLXXVIV")) // 1476
+	fmt.Println(romanToInt("MCMXCIV"))  // 1994
+	fmt.Println(romanToInt("III"))      // 3
+	fmt.Println(romanToInt("LVIII"))    // 58
+	fmt.Println(romanToInt("IV"))       // 4
+	fmt.Println(romanToInt("MCDLXXVI")) // 1476
 }
